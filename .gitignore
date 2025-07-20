@@ -1,24 +1,25 @@
-**/nodemodules/
-**/dist/
-
+# Environment files
 .env
-client/.env.local
-client/.env.development
-client/.env.production
+.env.local
 server/.env
+client/.env
 
+# Dependencies
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# Build outputs
 client/.next/
+client/out/
+server/dist/
 
+# Logs
+*.log
+
+# Database
+*.db
+
+# OS files
 .DS_Store
 Thumbs.db
-
-.vscode/
-
-client/node_modules/
-server/nodemodules/
-client/dist/
-server/dist/
-client/.env
-server/.env
-client/.next/
-node_modules
