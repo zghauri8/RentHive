@@ -1,7 +1,7 @@
 "use client";
 import { NAVBAR_HEIGHT } from "@/lib/constants";
 import { useAppDispatch, useAppSelector } from "@/state/redux";
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import Filtersbar from "./FiltersBar";
 import { useSearchParams } from "next/navigation";
 import FiltersFull from "./FiltersFull";
@@ -66,4 +66,11 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+// Wrap in Suspense for build compatibility
+export default function SearchPageWithSuspense() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchPage />
+    </Suspense>
+  );
+}
