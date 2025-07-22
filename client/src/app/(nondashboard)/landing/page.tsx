@@ -11,7 +11,6 @@ const Landing = () => {
       <HeroSection />
       <FeaturesSection />
       <DiscoverSection />
-      <FeaturesSection />
       <CallToActionSection />
       <FooterSection />
     </div>
